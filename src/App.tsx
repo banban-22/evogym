@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { SelectedPage } from './constants/types';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
-import Contact from './components/Contact';
+import ContactUs from './components/ContactUs';
 import Footer from './components/Footer';
 
 const App = () => {
@@ -30,9 +30,13 @@ const App = () => {
 
   return (
     <div className="app bg-gray-20">
-      <Navbar />
+      <Navbar
+        isTopOfPage={isTopOfPage}
+        setSelectedPage={setSelectedPage}
+        selectedPage={selectedPage}
+      />
       <Home setSelectedPage={setSelectedPage} />
-      <Contact />
+      <ContactUs />
       <Footer />
     </div>
   );
