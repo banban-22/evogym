@@ -9,6 +9,12 @@ import ActionButton from '../components/ActionButton';
 import Benefit from '../components/Benefit';
 import { SelectedPage } from '../constants/types';
 
+interface BenefitType {
+  icon: JSX.Element;
+  title: string;
+  description: string;
+}
+
 const benefits: Array<BenefitType> = [
   {
     icon: <HomeModernIcon className="h-6 w-6" />,
@@ -75,7 +81,7 @@ const Benefits = ({ setSelectedPage }: BenefitsProps) => {
           viewport={{ once: true, amount: 0.5 }}
           variants={variants}
         >
-          {benefits.map((benefit: BenefitProps) => (
+          {benefits.map((benefit: BenefitType) => (
             <Benefit
               key={benefit.title}
               icon={benefit.icon}
