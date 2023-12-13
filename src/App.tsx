@@ -36,8 +36,8 @@ const App = () => {
         selectedPage={selectedPage}
       />
       <Home setSelectedPage={setSelectedPage} />
-      <ContactUs />
-      <Footer />
+      <ContactUs setSelectedPage={setSelectedPage} />
+      <Footer setSelectedPage={setSelectedPage} />
     </div>
   );
 };
