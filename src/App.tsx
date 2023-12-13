@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 import { SelectedPage } from './constants/types';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
+import Benefits from './pages/Benefits';
+import OurClasses from './pages/OurClasses';
 import ContactUs from './components/ContactUs';
 import Footer from './components/Footer';
 
@@ -36,8 +38,10 @@ const App = () => {
         selectedPage={selectedPage}
       />
       <Home setSelectedPage={setSelectedPage} />
+      <Benefits setSelectedPage={setSelectedPage} />
+      <OurClasses setSelectedPage={setSelectedPage} />
       <ContactUs setSelectedPage={setSelectedPage} />
-      <Footer setSelectedPage={setSelectedPage} />
+      <Footer setSelectedPage={setSelectedPage} selectedPage={selectedPage} />
     </div>
   );
 };
